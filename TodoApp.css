@@ -1,0 +1,121 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background: linear-gradient(45deg, rgb(76, 0, 255), transparent, rgb(76, 0, 255));
+}
+:root{
+  --background-color: rgb(76, 0, 255);
+}
+.container{
+  max-width: 550px;
+  padding: 1.5em;
+  margin: 0 auto;
+  margin-top: 13.4em;
+  background: transparent;
+}
+.header{
+  font-family: "poppins";
+  color: #000;
+  
+  font-size: 3.5rem;
+  text-align: center;
+}
+.container .text-input{
+  width: 100%;
+  height: 3rem;
+  position: relative;
+  margin-bottom: 1.2em;
+  background-color: #000;
+  border: 1.5px solid #fff;
+  border-radius: 25px;
+  box-shadow: 0 0 5px #000;
+}
+.text-input input[type="text"]{
+  width: calc(100% - 6rem);
+  font-size: .8rem;
+  height: 3rem;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background-color: transparent;
+  padding-left: 10px;
+  color: #fff;
+  caret-color: var(--background-color);
+
+}
+
+.text-input .click{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: var(--background-color);
+  padding: 1em 1.8em;
+  height: 100%;
+  border-radius: 25px;
+  font-family: "poppins";
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: .3s linear width;
+  display: grid;
+  place-content: center;
+  color: #fff;
+}
+.click:hover{
+  background-color: hsl(258, 100%, 60%);
+}
+#todos{
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#todos li.items{
+  font-size: 14px;
+  color: #fff;
+  background-color: hsla(0, 0%, 27%, 9.13);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  text-align: justify;
+  padding: 10px;
+  border-radius: 10px;
+}
+.close{
+  background-color: #000;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  padding : 2px;
+  margin-left: 3px;
+}
+.small{
+  color: #000;
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: .7rem;
+  margin-top: 10rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 400px ){
+  :root{
+      font-size: 10px;
+  }
+  .text-input input[type="text"]{
+      width: 100%;
+  }
+  .container .text-input{
+      margin-bottom: 4em;
+  }
+  .text-input .click{
+      top: 3.6em;
+      width: 100%;
+  }
+}
